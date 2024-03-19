@@ -1,0 +1,227 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --mainclr: #19283f;
+    --secondary-bg: #eff7fa;
+    --redclr: #ff3150;
+    --yellowclr: #ffc400;
+    --cyanclr: #33d1cc;
+    --main-transition: .3s;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Cairo', sans-serif, 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+main > *{
+  padding: 3rem 0;
+}
+/* btn main */
+.btn-main{
+    color: var(--yellowclr);
+    background-color: var(--redclr);
+    transition: .3s;
+}
+.btn-main:hover{
+    color: var(--yellowclr);
+    background-color: var(--redclr);
+    box-shadow: 0 0px 15px 0 rgb(255 0 0);
+}
+/* section title */
+.sec-title::after{
+    content: "";
+    position: absolute;
+    border: 1px solid var(--cyanclr);
+    width: 8rem;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Icons */
+svg.number:first-child,
+svg.icon:last-child{
+    left: 50%;
+    transform: translateX(-50%);
+}
+svg.number:first-child{
+    color: var(--secondary-bg);
+    opacity: .5;
+}
+svg.icon:last-child{
+    color: var(--cyanclr);
+}
+/* page starting */
+/* Header */
+header{
+    background-color: var(--mainclr);
+    height: 72px;
+}
+.navbar{
+    background-color: var(--mainclr);
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+nav ul.navbar-nav .nav-link{
+    color: white;
+}
+nav ul.navbar-nav .nav-link.active,
+nav ul.navbar-nav .nav-link:hover,
+nav ul.navbar-nav .nav-link:focus{
+    color: var(--cyanclr);
+}
+header form input{
+    transition: .3s;
+    width: 25px;
+    outline: none;
+    caret-color: var(--mainclr);
+}
+header form .btn{
+    color: var(--yellowclr);
+    background-color: var(--redclr);
+    transition: .3s;
+}
+header form .btn:hover{
+    color: var(--yellowclr);
+    background-color: var(--redclr);
+    box-shadow: 0 0px 15px 0 rgb(255 0 0);
+}
+/* main */
+/* landing */
+#landing{
+    height: calc(100vh  - 72px);
+    background-color: var(--mainclr);
+}
+/* features */
+#features .icons-holder{
+    height: 200px;
+}
+#features h3{
+    color: var(--yellowclr);
+}
+/* our work */
+#our-work{
+    background-color: var(--secondary-bg);
+}
+.categories li{
+    cursor: pointer;
+    transition: .3s;
+}
+.categories .active{
+    background-color: var(--redclr);
+    width: 80px;
+    padding: .25rem 0;
+}
+.categories li:not(.active):hover{
+    color: var(--yellowclr);
+    color: var(--redclr);
+}
+.box > div{
+    overflow: hidden;
+    position: relative;
+}
+.box > div::before{
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--secondary-bg);
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background-color: #33d1ccb3;
+    transition: .3s;
+    transform: translateX(calc(-100% - 24px));
+}
+.box > div:hover:before{
+    transform: translateX(0)
+}
+/* Team */
+#team{
+    background-color: var(--secondary-bg);
+}
+#team .container > div > h2{
+    color: var(--yellowclr);
+}
+#team .team-player{
+    background-color: #fff;
+}
+#team .player-title{
+    background-color: var(--cyanclr);
+}
+/* Project */
+#project {
+    background-color: var(--mainclr);
+}
+/* bolg */
+#blog article .text{
+    background-color: var(--secondary-bg);
+    cursor: pointer;
+}
+/* subscribe */
+#subscribe{
+    background-color: var(--yellowclr);
+}
+#subscribe input{
+    outline: none;
+    caret-color: var(--cyanclr);
+}
+#subscribe button{
+    color: var(--yellowclr);
+    background-color: var(--mainclr);
+}
+/* footer */
+footer{
+    background-color: var(--mainclr);
+}
+.compyright span:last-child{
+    color: var(--yellowclr);
+}
+footer svg{
+    transition: .3s;
+}
+footer .facebook{
+    background-color: #1877f2;
+}
+footer .facebook:hover{
+    box-shadow: 0 0px 15px 0 #1877f2;
+}
+footer .X{
+    background-color: #14171a;
+}
+footer .X:hover{
+    box-shadow: 0 0px 15px 0 #14171a;
+}
+footer .linkedin{
+    background-color: #0077b5;
+}
+footer .linkedin:hover{
+    box-shadow: 0 0px 15px 0 #0077b5;
+}
+footer .youtube{
+    background-color: #ff0000;
+}
+footer .youtube:hover{
+    box-shadow: 0 0px 15px 0 #ff0000;
+}
+
+/* Animations */
+@keyframes searchSVG {
+    0%, 100%{
+        color: var(--cyanclr);
+    }
+    50%{
+        color: transparent;
+    }
+}
