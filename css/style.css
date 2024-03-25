@@ -225,3 +225,13 @@ footer .youtube:hover{
         color: transparent;
     }
 }
+@keyframes flashing {
+  0%, 40%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
