@@ -29,7 +29,7 @@ main > *{
 .btn-main{
     color: var(--yellowclr);
     background-color: var(--redclr);
-    transition: .3s;
+    transition: var(--main-transition);
 }
 .btn-main:hover{
     color: var(--yellowclr);
@@ -80,7 +80,7 @@ nav ul.navbar-nav .nav-link:focus{
     color: var(--cyanclr);
 }
 header form input{
-    transition: .3s;
+    transition: var(--main-transition);
     width: 25px;
     outline: none;
     caret-color: var(--mainclr);
@@ -88,7 +88,7 @@ header form input{
 header form .btn{
     color: var(--yellowclr);
     background-color: var(--redclr);
-    transition: .3s;
+    transition: var(--main-transition);
 }
 header form .btn:hover{
     color: var(--yellowclr);
@@ -114,7 +114,7 @@ header form .btn:hover{
 }
 .categories li{
     cursor: pointer;
-    transition: .3s;
+    transition: var(--main-transition);
 }
 .categories .active{
     background-color: var(--redclr);
@@ -141,7 +141,7 @@ header form .btn:hover{
     width: calc(100% - 8px);
     height: calc(100% - 8px);
     background-color: #33d1ccb3;
-    transition: .3s;
+    transition: var(--main-transition);
     transform: translateX(calc(-100% - 24px));
 }
 .box > div:hover:before{
@@ -156,6 +156,11 @@ header form .btn:hover{
 }
 #team .team-player{
     background-color: #fff;
+    transition: var(--main-transition);
+}
+#team .team-player:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 2px 35px 0 rgba(144, 35, 35, 0.614);
 }
 #team .player-title{
     background-color: var(--cyanclr);
@@ -165,9 +170,30 @@ header form .btn:hover{
     background-color: var(--mainclr);
 }
 /* bolg */
+#blog article{
+    transition: var(--main-transition);
+}
+#blog article:hover{
+    transform: translateY(-5%);
+    box-shadow: 0 5px 15px var(--mainclr);
+}
 #blog article .text{
     background-color: var(--secondary-bg);
     cursor: pointer;
+}
+#blog article::before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--mainclr);
+    transition: var(--main-transition);
+}
+#blog article:hover::before{
+    width: 100%;
 }
 /* subscribe */
 #subscribe{
@@ -189,7 +215,7 @@ footer{
     color: var(--yellowclr);
 }
 footer svg{
-    transition: .3s;
+    transition: var(--main-transition);
 }
 footer .facebook{
     background-color: #1877f2;
@@ -224,14 +250,4 @@ footer .youtube:hover{
     50%{
         color: transparent;
     }
-}
-@keyframes flashing {
-  0%, 40%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-    width: 200%;
-    height: 200%;
-  }
 }
